@@ -3,6 +3,7 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y openssh-server
 RUN apt-get update && apt-get install -y python3.7
 RUN apt-get install -y default-jdk
+RUN apt-get install -y git
 RUN mkdir /var/run/sshd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
