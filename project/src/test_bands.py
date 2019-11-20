@@ -23,6 +23,7 @@ def test_throughput(band:int , bandwidth:int, duration:int=10):
     print()
     if int(band) in [1, 3, 5, 7] and int(bandwidth) in [5, 20]:
         raise DemoTestException(f'This combination of band/bandwidth {band}/{bandwidth}MGz does not work')
+    logging.info('Echo just to trigger the job')
     return True
 
 
