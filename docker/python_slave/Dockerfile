@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y openssh-server
-RUN apt-get update && apt-get install -y python3.7
+RUN apt-get update && apt-get install -y python3.7 && apt-get install -y python-pip && apt-get install python3-distutils
 RUN apt-get install -y default-jdk
 RUN apt-get install -y git
 RUN mkdir /var/run/sshd
